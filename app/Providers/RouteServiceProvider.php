@@ -47,7 +47,7 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define the "web" routes for the application.
+     * Define the "public" routes for the application.
      *
      * These routes all receive session state, CSRF protection, etc.
      *
@@ -64,7 +64,7 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define the "web" routes for the application.
+     * Define the "guest" routes for the application.
      *
      * These routes all receive session state, CSRF protection, etc.
      *

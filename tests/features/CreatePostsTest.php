@@ -60,5 +60,8 @@ class CreatePostsTest extends FeatureTestCase
 
         // Then
         $this->seePageIs(route('login'));
+
+        //mensaje de alerta
+        //$this->see('me manda al login por no estar logueado');
     }
 }
