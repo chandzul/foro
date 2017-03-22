@@ -64,4 +64,14 @@ class CreatePostsTest extends FeatureTestCase
         //mensaje de alerta
         //$this->see('me manda al login por no estar logueado');
     }
+
+    public function test_create_post_form_validation()
+    {
+        $this->actingAs($this->defaultUser())
+            ->visit(route('posts.create'))
+            ->press('Publicar')
+            ->seePageIs(route('posts.create'))
+            ->seeInElement('#field_title.has-error .help-block', 'El campo título es obligatorio')
+            ->seeInElement('#field_content.has-error .help-block', 'El campo contenido es obligatorio');
+    }
 }
